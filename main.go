@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/uilhermehnog/bookstore-api/routes"
+	"github.com/guilhermehnog/bookstore-api/routes"
 )
 
 func main() {

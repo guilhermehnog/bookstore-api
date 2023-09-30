@@ -1,31 +1,20 @@
 package routes
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"github.com/guilhermehnog/bookstore-api/handler"
 )
 
 func ConfigureBooksRoutes(router *gin.Engine) {
 	v1 := router.Group("/api/v1")
 
-	v1.GET("/books", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "GET Books"})
-	})
+	v1.GET("/books", handler.GetBooksHandler)
 
-	v1.GET("/book", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "GET Book"})
-	})
+	v1.GET("/book", handler.GetBookHandler)
 
-	v1.POST("/book", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "POST Book"})
-	})
+	v1.POST("/book", handler.PostBookHandler)
 
-	v1.PATCH("/book", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "PATCH Book"})
-	})
+	v1.PATCH("/book", handler.PatchBookHandler)
 
-	v1.DELETE("/book", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "DELETE Book"})
-	})
+	v1.DELETE("/book", handler.DeleteBookHandler)
 }

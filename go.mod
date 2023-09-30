@@ -1,4 +1,4 @@
-module github.com/uilhermehnog/bookstore-api
+module github.com/guilhermehnog/bookstore-api
 
 go 1.21.1
 
