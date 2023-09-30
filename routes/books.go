@@ -17,15 +17,15 @@ func ConfigureBooksRoutes(router *gin.Engine) {
 		c.JSON(http.StatusOK, gin.H{"message": "GET Book"})
 	})
 
-	v1.POST("/books", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "POST Books"})
+	v1.POST("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "POST Book"})
 	})
 
-	v1.PATCH("/books", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "PATCH Books"})
+	v1.PATCH("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "PATCH Book"})
 	})
 
-	v1.DELETE("/books", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "DELETE Books"})
+	v1.DELETE("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "DELETE Book"})
 	})
 }
