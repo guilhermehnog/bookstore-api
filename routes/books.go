@@ -10,7 +10,7 @@ func ConfigureBooksRoutes(router *gin.Engine) {
 
 	v1.GET("/books", handler.GetBooksHandler)
 
-	v1.GET("/book", handler.GetBookHandler)
+	v1.GET("/book/:id", handler.GetBookHandler)
 
 	v1.POST("/book", handler.PostBookHandler)
 
