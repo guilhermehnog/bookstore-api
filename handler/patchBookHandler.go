@@ -31,7 +31,7 @@ func PatchBookHandler(c *gin.Context) {
 	if err != nil {
 		return
 	}
-	rows, err = res.RowsAffected()
+	rows, _ = res.RowsAffected()
 	c.IndentedJSON(http.StatusOK, gin.H{"Book Updated": updatedBook, "Rows Affected": rows})
 
 }

@@ -27,7 +27,7 @@ func DeleteBookHandler(c *gin.Context) {
 	if res, err := conn.Exec(`DELETE FROM books WHERE id=$1`, deleteBook.ID); err != nil {
 		c.IndentedJSON(http.StatusInternalServerError, err)
 	} else {
-		rows, err = res.RowsAffected()
+		rows, _ = res.RowsAffected()
 	}
 	c.IndentedJSON(http.StatusOK, gin.H{"Book Deleted": deleteBook, "Rows Affected": rows})
 }
